@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="shortcut icon" href="images/Logo.png" type="Logo.png" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Bloom | Digital Marketing</title>
+    <!-- Main Template CSS File -->
+    <link rel="stylesheet" href="css/leon.css" />
+    <!-- Render All Elements Normally -->
+    <link rel="stylesheet" href="css/normalize.css" /> 
+    <!-- Font Awesome Library -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600;700;800&#038;display=swap"
+      rel="stylesheet"
+    />
+    
+    <style>
+        /* Start Variables */
+:root {
+  
+  --main-color: #10cab7;
+  --secondary-color: #2c4755;
+  --section-padding: 60px;
+  --section-background: #ffffff;
+  --main-duration: 0.5s;
+  --main-transition: 0.3s;
+  --main-padding-top: 100px;
+  --main-padding-bottom: 100px;
+
+}
+
+/* End Variables */
+/* Start Global Rules */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Work Sans", sans-serif;
+  background-color: #ffffff;
+}
+
+
+.comments {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  background-color: var(--section-background);
+}
+.comments .portfolio-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 30px;
+  margin-top: 80px;
+}
+
+/* Start Footer */
+.footer {
+  background-color: #191919;
+  padding: 70px 0 0;
+}
+@media (max-width: 767px) {
+  .footer {
+    text-align: center;
+  }
+}
+.footer .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 40px;
+}
+.footer .box img {
+  width: 150px;
+}
+.footer .box .social {
+  display: flex;
+}
+@media (max-width: 767px) {
+  .footer .box .social {
+    justify-content: center;
+  }
+}
+.footer .box .social li {
+  margin-right: 10px;
+}
+.footer .box .social li a {
+  background-color: #313131;
+  color: #b9b9b9;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  transition: var(--main-transition);
+  text-decoration: none;
+}
+.footer .box .social .facebook:hover {
+  background-color: #1877f2;
+}
+.footer .box .social .twitter:hover {
+  background-color: #1da1f2;
+}
+.footer .box .social .LinkedIn:hover {
+  background-color: #0A66C2;
+}
+.footer .box .text {
+  line-height: 2;
+  color: #b9b9b9;
+}
+.footer .box .links li {
+  padding: 15px 0;
+  transition: var(--main-transition);
+}
+.footer .box .links li:not(:last-child) {
+  border-bottom: 1px solid #444;
+}
+.footer .box .links li:hover {
+  padding-left: 10px;
+}
+.footer .box .links li:hover a {
+  color: white;
+}
+.footer .box .links li a {
+  color: #b9b9b9;
+  transition: var(--main-transition);
+  text-decoration: none;
+}
+.footer .box .links li a::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\F101";
+  font-weight: 900;
+  margin-right: 10px;
+  color: var(--main-color);
+}
+.footer .box .line {
+  display: flex;
+  align-items: center;
+  color: #b9b9b9;
+  margin-bottom: 30px;
+}
+@media (max-width: 767px) {
+  .footer .box .line {
+    flex-direction: column;
+  }
+}
+.footer .box .line i {
+  font-size: 25px;
+  color: var(--main-color);
+  margin-right: 10px;
+}
+@media (max-width: 767px) {
+  .footer .box .line i {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+}
+.footer .box .line .info {
+  line-height: 1.7;
+  flex: 1;
+}
+.footer .box .line .info span {
+  display: block;
+}
+.footer .footer-gallery img {
+  width: 78px;
+  border: 3px solid white;
+  margin: 2px;
+}
+.footer .copyright {
+  padding: 25px 0;
+  text-align: center;
+  color: white;
+  margin: 50px 0 0;
+  border-top: 1px solid #444;
+}
+.span {
+    color: var(--main-color);
+    font-weight: 600;
+    font-size: 23px;
+}
+.comments {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  background-color: var(--section-background);
+}
+.comments .portfolio-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 30px;
+  margin-top: 80px;
+}
+.fb-comments {
+  margin-left: 300px;
+}
+@media (max-width:767px) {
+  .fb-comments {
+    margin: 0;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f1f1f1;
+  min-height: 5000px;
+}
+.scroller {
+  background-color: #0075ff;
+  width: 0;
+  height: 4px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+}
+
+/* End Footer */
+
+
+    </style>
+  </head>
+  <body>
+    <!-- Start Front Comments --> 
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/ar_AR/sdk.js#xfbml=1&version=v16.0" nonce="zrrEcVwp"></script>
+  <!-- End Front Comments -->
+
+  <div class="scroller"></div>
+  
+  
+   <!-- Start Header -->
+    <div class="header">
+      <div class="container">
+        <img decoding="async" class="logo" src="imgs/Logo.png" alt="" />
+        <div class="links">
+          <span class="icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+          <ul>
+            <li><a href="Dashboard.html">Dashboard</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- End Header -->
+
+    <!-- Start Landing Section -->
+    <div class="landing">
+        <div class="intro-text">
+          <h1>Hello There</h1>
+          <p> We are Bloom - Super Creative For Digital Marketing Agency</p>
+          <a href="Portfolio.html" class="btn btn-primary btn-lg">Press Here</a>
+        </div>
+      </div>
+      <!-- End Landing Section -->
+      <br><br><br><br>
+
+       <!-- Start Features -->
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col">
+      <div class="card">
+        <img src="gif/Intro Gif 01.gif" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Motion Graphic</h5>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content .</p>
+          <p class="card-teext">3000 L.E</p>
+          <a href="https://bloom-store.mystrikingly.com/store/products/motion-graphic" class="btn btn-outline-dark btn-lg">Shop Now</a>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="gif/All Social Media.gif" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Content Creator</h5>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content .</p>
+          <p class="card-teext">400 L.E</p>
+           <a href="https://bloom-store.mystrikingly.com/store/products/digital-marketing-plan" class="btn btn-outline-dark btn-lg">Shop Now</a>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="gif/Social Media Management 01.gif" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Social Media Management</h5>
+          <p class="card-text">Web design encompasses many different skills and disciplines in the production  </p>
+          <p class="card-teext">600 L.E</p>
+          <a href="https://bloom-store.mystrikingly.com/store/products/social-media-management" class="btn btn-outline-dark btn-lg">Shop Now</a>
+        </div>
+      </div>
+    </div>
+    
+</div>
+
+  <!-- End Features -->
+
+   <!-- Start Services -->
+   <div class="services" id="services">
+    <div class="container">
+      <h2 class="special-heading">Services</h2>
+      <p>Graphic Design</p>
+      <div class="services-content">
+        <div class="col">
+          <!-- Start Service -->
+          <div class="srv">
+            <i class="fas fa-play"></i>
+            <div class="text">
+              <h3>Motion Graphic</h3>
+              <p>
+               This is a longer card with supporting text below as a natural lead-in to additional content 
+              </p>
+            </div>
+          </div>
+          <div class="srv">
+            <i class="fas fa-ad"></i>
+            <div class="text">
+              <h3>Digital Marketing</h3>
+              <p>
+                Process of enhancing user satisfaction with a product by improving the usability, accessibility, and
+                pleasure provided in the interaction.
+              </p>
+            </div>
+          </div>
+          <!-- End Service -->
+        </div>
+
+
+        <div class="col">
+            <!-- Start Services -->
+            <div class="srv">
+              <i class="fas fa-pen-nib"></i>
+              <div class="text">
+                <h3>Graphic Design</h3>
+                <p>
+                  Graphic design is the process of visual communication and problem-solving using one or more of
+                  typography, photography and illustration.
+                </p>
+              </div>
+            </div>
+            <div class="srv">
+              <i class="fas fa-photo-video"></i>
+              <div class="text">
+                <h3>Social Media Management</h3>
+                <p>
+                  Web development is a broad term for the work involved in developing a web site for the Internet or an
+                  intranet.
+                </p>
+              </div>
+            </div>
+            <!-- End Services -->
+          </div>
+          <div class="col">
+            <div class="image image-column">
+              <img decoding="async" src="images/Logo.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Services -->
+
+    <!-- Start Portfolio -->
+    <div class="portfolio" id="portfolio">
+        <div class="container">
+          <h2 class="special-heading">Portfolio</h2>
+          <p>If you do it right, it will last forever.</p>
+          <div class="portfolio-content">
+            <div class="card">
+              <img decoding="async" src="images/Design.png" alt="" />
+              <div class="info">
+                <h5>Claim & Claim Submission Design</h5>
+                <p>This is a design by Bloom team about the difference between Claim & Claim Submission</p>
+              </div>
+            </div>
+            <div class="card">
+              <img decoding="async" src="images/bloom 1.png" alt="" />
+              <div class="info">
+                <h3>Free marketing plan</h3>
+                <p>We provide a free marketing plan to our customers only </p>
+              </div>
+            </div>
+            <div class="card">
+              <img decoding="async" src="images/3 months page 2.png" alt="" />
+              <div class="info">
+                <h5>Social Media Management</h5>
+                <p>We can professionally manage the social media pages for our clients </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Portfolio -->
+
+      <!-- Start Pricing -->
+    <div class="pricing" id="pricing">
+        <h2 class="main-title">Pricing Plans</h2>
+        <div class="container">
+          <div class="box">
+            <div class="title">Basic</div>
+            <img decoding="async" src="imgs/hosting-basic.png" alt="" />
+            <div class="price">
+              <span class="amount"><del> 3500 L.E</del></span>
+              <span class="amount">2500 L.E</span>
+              <span class="time">Per Month</span>
+            </div>
+            
+            <ul>
+              <li>Digital Marketing Plan</li>
+              <li>Social Media Management</li>
+              <li>Content Management</li>
+              <li>Media buying</li>
+              <li>Moderation</li>
+              <li>15 Post monthly</li>
+              <li>1 Video Motion</li>
+              <li>Logo & Identity</li>
+            </ul>
+            
+            <a href="https://bloom-store.mystrikingly.com/store/products/basic">Choose Plan</a>
+          </div>
+          
+          <div class="box popular">
+            <div class="label">Most Popular</div>
+            <div class="title">Standard</div>
+            <img decoding="async" src="imgs/hosting-advanced.png" alt="" />
+            <div class="price">
+              <span class="amount"><del> 4500 L.E</del></span>
+              <span class="amount">3500 L.E</span>
+              <span class="time">Per Month</span>
+            </div>
+            
+            <ul>
+              <li>Market Research</li>
+              <li>Digital Marketing Plan</li>
+              <li>Social Media Management</li>
+              <li>Content Management</li>
+              <li>Media buying</li>
+              <li>Moderation</li>
+              <li>20 Post monthly</li>
+              <li>2 Video Motion</li>
+              <li>Logo & Identity</li>
+            </ul>
+            <a href="https://bloom-store.mystrikingly.com/store/products/standard">Choose Plan</a>
+          </div>
+          
+          <div class="box">
+            <div class="title">Premium</div>
+            <img decoding="async" src="imgs/hosting-professional.png" alt="" />
+            <div class="price">
+             <span class="amount"><del> 6000 L.E</del></span>
+              <span class="amount">5000 L.E</span>
+              <span class="time">Per Month</span>
+            </div>
+            <ul>
+              <li>Market Research</li>
+              <li>Digital Marketing Plan</li>
+              <li>Social Media Management</li>
+              <li>Content Management</li>
+              <li>Media buying</li>
+              <li>Moderation</li>
+              <li>20 Post monthly</li>
+              <li>3 Video Motion</li>
+              <li>Logo & Identity</li>
+              <li>SEO Marketing</li>
+            </ul>
+            <a href="https://bloom-store.mystrikingly.com/store/products/premium">Choose Plan</a>
+          </div>
+        </div>
+      </div>
+      <!-- End Pricing -->
+
+      <!-- Start About -->
+    <div class="about">
+        <div class="container">
+          <h2 class="special-heading">About</h2>
+          <p>Less is more work</p>
+          <div class="about-content">
+            <div class="image">
+              <img decoding="async" src="images/Logo.png" alt="" />
+            </div>
+            <div class="text">
+              <p>
+                We can provide <span class="span">all kinds of marketing services</span> through full coverage of social media through a complete analysis of the market, competitors,
+                and paid campaigns to work on building the brand and expand business to increase sales and profit  for customers, and helping them to reach their goals,
+                in addition to providing a <span class="span">call center service</span> to help Them submit complaints and proposals to provide them with <span class="span">an ideal solution</span>
+                
+              </p>
+              <hr />
+              <p>
+                Professional Team work, High quality and meet standards in all steps, location and sales Team .... 
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End About -->
+      
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  
+      <!-- Option 2: Separate Popper and Bootstrap JS -->
+      <!--
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+      -->
+
+       <!-- Start Contact -->
+    <div class="contact">
+        <div class="container">
+          <h2 class="special-heading">Contact</h2>
+          <p>We are born to create .. Contact Us  Now </p>
+          <div class="info">
+            <p class="label">Feel free to drop us a line at:</p>
+            <a href="mailto:bloomagencyy@gmail.com?subject=Contact" class="link">bloomagencyy@gmail.com</a>
+            <div class="social">
+              Find Us On Social Networks
+              <i class="fab fa-linkedin-in"></i>
+              <a href="https://www.facebook.com/profile.php?id=100089113279864&mibextid=ZbWKwL"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://twitter.com/anvilmed?s=09"><i class="fab fa-twitter"></i> </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Contact -->
+
+
+      <!-- Start Facebook Comments -->
+    <div class="comments">
+        <div class="container">
+          <h2 class="special-heading">Comments</h2>
+          <p>We can Comment or Rate Our Site</p> <br>
+            <div class="fb-comments" data-href="https://bloooom.netlify.app/" data-width="" data-numposts="5"></div>
+        </div>
+      </div>
+      
+      <!-- End Facebook Comments -->
+      <br>
+
+      <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+      <div class="elfsight-app-d75fef34-67c8-452d-b6b6-65e7f3d99fbc"></div>
+      
+      <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+      <div class="elfsight-app-dd60f514-b400-4305-bdac-7f2356d7da30"></div>
+      
+       <!-- Start Footer -->
+    <div class="footer">
+        <div class="container">
+          <div class="box">
+            <img class="img" src="images/logo.png">
+            <ul class="social">
+              <li>
+                <a href="#" class="facebook">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="twitter">
+                  <i class="fab fa-twitter"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+                </a>
+              </li>
+            </ul>
+            <br>
+            <p class="text">
+              Professional Team work, High quality and meet standards in all steps, location and sales Team)
+            </p>
+          </div>
+          <div class="box">
+            <ul class="links">
+              <li><a href="#"> Home Page </a></li>
+              <li><a href="Contact.html">Contact Us</a></li>
+              <li><a href="https://bloom-store.mystrikingly.com/store/products/premium">Pricing Plan ( Premium )</a></li>
+              <li><a href="https://bloooom.netlify.app/question%20&%20answer">Question & Answer</a></li>
+              <li><a href="https://bloooom.netlify.app/portfolio">Portfolio</a></li>
+            </ul>
+          </div>
+          <div class="box">
+            <div class="line">
+              <i class="fas fa-map-marker-alt fa-fw"></i>
+              <div class="info">Saudi Arabia , El- Worud commerical center, El-Worud-district , Jeddah </div>
+            </div>
+            <div class="line">
+              <i class="far fa-clock fa-fw"></i>
+              <div class="info">Business Hours: From 10:00 To 18:00</div>
+            </div>
+            <div class="line">
+              <i class="fas fa-phone-volume fa-fw"></i>
+              <div class="info">
+                <span>+2 011 21000 955</span>
+                <span>+009660582607653</span>
+              </div>
+            </div>
+          </div>
+          <div class="box footer-gallery">
+            <img decoding="async" src="imgs/gallery-01.png" alt="" />
+            <img decoding="async" src="imgs/gallery-02.png" alt="" />
+            <img decoding="async" src="imgs/gallery-03.jpg" alt="" />
+            <img decoding="async" src="imgs/gallery-04.png" alt="" />
+            <img decoding="async" src="imgs/gallery-05.jpg" alt="" />
+            <img decoding="async" src="imgs/gallery-06.png" alt="" />
+          </div>
+        </div>
+        <p class="copyright"> <span class="span">Bloom</span> &copy; 2023  All Right Reserved</p>
+      </div>
+      <!-- End Footer -->
+      
+     
+    
+      
+     
+      
+      
+      
+      <div class="scroller"></div>
+      
+
+
+  </body>
