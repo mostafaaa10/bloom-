@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link href="path/to/lightbox.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="images/Logo.png" type="Logo.png" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Bloom | Portfolio</title>
+    <!-- Main Template CSS File -->
+    <link rel="stylesheet" href="css/leon.css" />
+    <!-- Render All Elements Normally -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <!-- Font Awesome Library -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600;700;800&#038;display=swap"
+      rel="stylesheet"/>
+  <style>
+   
+   /* Start Features */
+.features {
+  padding-top: var(--main-padding-top);
+  padding-bottom: var(--main-padding-bottom);
+  position: relative;
+  background-color: white;
+}
+.features .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px;
+}
+.features .box {
+  text-align: center;
+  border: 1px solid #ccc;
+}
+.features .box .img-holder {
+  position: relative;
+  overflow: hidden;
+}
+.features .box .img-holder::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -1px;
+  width: 100%;
+  height: 100%;
+}
+.features .box .img-holder::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border-style: solid;
+  border-width: 0px 0px 170px 500px;
+  border-color: transparent transparent white transparent;
+  transition: var(--main-transition);
+}
+.features .box .img-holder img {
+  max-width: 100%;
+}
+.features .box:hover .img-holder::after {
+  border-width: 170px 500px 170px 0;
+}
+.features .box h2 {
+  position: relative;
+  font-size: 40px;
+  margin: auto;
+  width: fit-content;
+}
+.features .box h2::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 15px;
+  height: 5px;
+  width: calc(100% - 30px);
+}
+.features .box p {
+  line-height: 2;
+  font-size: 20px;
+  margin: 30px 0;
+  padding: 25px;
+  color: #777;
+}
+.features .box a {
+  display: block;
+  border: 3px solid transparent;
+  width: fit-content;
+  margin: 0 auto 30px;
+  font-weight: bold;
+  font-size: 22px;
+  padding: 10px 30px;
+  border-radius: 6px;
+  transition: var(--main-transition);
+}
+
+.features .quality .img-holder::before {
+}
+.features .quality h2::after {
+  background-color: #f44036;
+}
+.features .quality a {
+  color: #f44036;
+  border-color: #f44036;
+  background: linear-gradient(to right, #f44036 50%, white 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+}
+.features .time .img-holder::before {
+}
+.features .time h2::after {
+  background-color: #009688;
+}
+.features .time a {
+  color: #009688;
+  border-color: #009688;
+  background: linear-gradient(to right, #009688 50%, white 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+}
+.features .passion .img-holder::before {
+}
+.features .passion h2::after {
+  background-color: #03a9f4;
+}
+.features .passion a {
+  color: #03a9f4;
+  border-color: #03a9f4;
+  background: linear-gradient(to right, #03a9f4 50%, white 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  
+  
+}
+.features .box:hover a {
+  background-position: left bottom;
+  color: white;
+}
+/* End Features */
+   
+
+button.back-to-top{
+  margin: 0 !important;
+  padding: 0 !important;
+  background: #fff;
+	height: 0px;
+  width: 0px;
+  overflow: hidden;
+	border-radius: 50px;
+	-webkit-border-radius: 50px;
+	-moz-border-radius: 50px;
+  color: transparent;
+	clear: both;
+  visibility: hidden;
+  position: fixed;
+  cursor: pointer;
+  display: block;
+  border: none;
+  right: 50px;
+	bottom: 75px;
+  font-size: 0px;
+  outline: 0 !important;
+  z-index: 99;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+button.back-to-top:hover,
+button.back-to-top:active,
+button.back-to-top:focus,{
+  outline: 0 !important;
+}
+button.back-to-top::before,
+button.back-to-top::after {
+  content: "";
+    display: block;
+    vertical-align: middle;
+    border-bottom: solid 10px #EA5D5F;
+    border-left: solid 10px transparent;
+    line-height: 0;
+    border-right: solid 10px transparent;
+    height: 0;
+    margin: 18px auto 0;
+    width: 0;
+  border-radius:20px;
+  visibility: hidden;
+}
+button.back-to-top.show::after,
+button.back-to-top.show::before{
+  visibility: visible;
+}
+button.back-to-top::after {
+  border-bottom-color:#fff;
+      position: relative;
+  top:-24px;
+}
+button.back-to-top.show {
+  display: block;
+  background: #fff;
+  color: #00ab6c;
+  font-size: 25px;
+  right: 25px;
+	bottom: 50px;
+  height: 50px;
+  width: 50px;
+  visibility: visible;
+	box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.25);
+}
+button.back-to-top.show:active {
+  box-shadow: 0px 4px 8px 2px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0px 4px 8px 2px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0px 4px 8px 2px rgba(0, 0, 0, 0.25);
+}
+
+
+   
+    /* Start Footer */
+.footer {
+  background-color: #191919;
+  padding: 70px 0 0;
+}
+@media (max-width: 767px) {
+  .footer {
+    text-align: center;
+  }
+}
+.footer .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 40px;
+}
+.footer .box h3 {
+  color: white;
+  font-size: 50px;
+  margin: 0 0 20px;
+}
+.footer .box .social {
+  display: flex;
+}
+@media (max-width: 767px) {
+  .footer .box .social {
+    justify-content: center;
+  }
+}
+.footer .box .social li {
+  margin-right: 10px;
+}
+.footer .box .social li a {
+  text-decoration: none;
+  background-color: #313131;
+  color: #b9b9b9;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  transition: var(--main-transition);
+}
+.footer .box .social .facebook:hover {
+  background-color: #4267B2;
+}
+.footer .box .social .twitter:hover {
+  background-color: #1da1f2;
+}
+.footer .box .social .linkedin:hover {
+  background-color: #0A66C2 ;
+}
+.footer .box .text {
+  line-height: 2;
+  color: #b9b9b9;
+}
+.footer .box .links li {
+  padding: 15px 0;
+  transition: var(--main-transition);
+}
+.footer .box .links li:not(:last-child) {
+  border-bottom: 1px solid #444;
+}
+.footer .box .links li:hover {
+  padding-left: 10px;
+}
+.footer .box .links li:hover a {
+  color: white;
+}
+.footer .box .links li a {
+  text-decoration: none;
+  color: #b9b9b9;
+  transition: var(--main-transition);
+
+}
+.footer .box .links li a::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\F101";
+  font-weight: 900;
+  margin-right: 10px;
+  color: var(--main-color);
+}
+.footer .box .line {
+  display: flex;
+  align-items: center;
+  color: #b9b9b9;
+  margin-bottom: 30px;
+}
+@media (max-width: 767px) {
+  .footer .box .line {
+    flex-direction: column;
+  }
+}
+.footer .box .line i {
+  font-size: 25px;
+  color: var(--main-color);
+  margin-right: 10px;
+}
+@media (max-width: 767px) {
+  .footer .box .line i {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+}
+.footer .box .line .info {
+  line-height: 1.7;
+  flex: 1;
+}
+.footer .box .line .info span {
+  display: block;
+}
+.footer .container .box .img {
+  width: 200px; 
+}
+.footer .footer-gallery img {
+  width: 78px;
+  border: 3px solid white;
+  margin: 2px;
+}
+.footer .copyright {
+  padding: 25px 0;
+  text-align: center;
+  color: white;
+  margin: 50px 0 0;
+  border-top: 1px solid #444;
+  font-size: 20px;
+}
+.copyright span {
+  color: #10cab7;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+/* End Footer */
+/* Start Animation */
+@keyframes up-and-down {
+  0%,
+  100% {
+    top: 0;
+  }
+  50% {
+    top: -50px;
+  }
+}
+@keyframes bouncing {
+  0%,
+  10%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40%,
+  60% {
+    transform: translateY(-15px);
+  }
+}
+@keyframes left-move {
+  50% {
+    left: 0;
+    width: 12px;
+    height: 12px;
+  }
+  100% {
+    left: 0;
+    border-radius: 0;
+    width: 50%;
+    height: 100%;
+  }
+}
+@keyframes right-move {
+  50% {
+    right: 0;
+    width: 12px;
+    height: 12px;
+  }
+  100% {
+    right: 0;
+    border-radius: 0;
+    width: 50%;
+    height: 100%;
+  }
+}
+@keyframes moving-arrow {
+  100% {
+    transform: translateX(10px);
+  }
+}
+@keyframes flashing {
+  0%,
+  40% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    width: 200%;
+    height: 200%;
+  }
+}
+@keyframes change-background {
+  0%,
+  100% {
+    background-image: url("../imgs/discount-background1.jpg");
+  }
+  50% {
+    background-image: url("../imgs/discount-background2.jpg");
+  }
+}
+
+/* End Animation */
+/* End Footer */
+
+/* Start Paypal */
+.elfsight-app-6aa6a0ad-0435-4035-bf03-eb10c43102c9 {
+  margin-left: 800px;
+}
+@media(max-width: 767px) {
+  .elfsight-app-6aa6a0ad-0435-4035-bf03-eb10c43102c9 {
+  margin-left: 60px;
+}
+}
+/* End Paypal */
+
+.fb-comments {
+  margin-left: 750px;
+}
+@media (max-width: 1199px) {
+  .fb-comments {
+    margin: 0;
+  }
+}
+
+
+  </style>
+  </head>
+  <body>
+  <div id="fb-root"></div>
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/ar_AR/sdk.js#xfbml=1&version=v16.0" nonce="KFajiRbb"></script>
+
+  <!-- Start Navbar-->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="images/logo.png"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Dashboard.html">Dashboard</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Social Media Links
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-Facebook" href="https://www.facebook.com/profile.php?id=100089113279864&mibextid=ZbWKwL">Facebook</a></li>
+              <li><a class="dropdown-Twitter" href="#">Twitter</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-In" href="#">Linked In </a></li>
+            </ul>
+          </li>
+          
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+ </nav>
+
+  <!-- End Navbar-->
+   
+  <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+  <div class="elfsight-app-5ca78efa-b5bc-4ec3-b7fc-a2703ed3c445"></div>
+
+   <!-- Start Landing Section -->
+    <div class="landing">
+      <div class="intro-text">
+        <h1>Designs Portfolio  </h1>
+        <p>Bloom showcases our designs in various fields</p>
+      </div>
+    </div>
+    <!-- End Landing Section -->
+
+    
+    <div class="contentDiv" id="content">
+      <button class="back-to-top show" type="button"></button>
+    </div>
+
+
+    <br><br><br><br>
+
+   <!-- Start Features -->
+    <div class="features" id="features">
+      <h2 class="main-title">Features</h2>
+      <div class="container">
+        <div class="box quality">
+          <div class="img-holder"><img decoding="async" src="images/aus coding.png" alt="" /></div>
+          <h2>Medical Coding</h2>
+          <p> medical coding is very important, but there are two types of coding: Australian & American coding </p> 
+          <a href="Medical Coding.html" class="med">More</a>
+        </div>
+        <div class="box time">
+          <div class="img-holder"><img decoding="async" src="images/Design.png" alt="" /></div>
+          <h2>Question & Answer</h2>
+          <p>We ask customers questions that are on their minds and give them</p>
+          <a href="Question & Answer.html">More</a>
+        </div>
+        <div class="box passion">
+          <div class="img-holder"><img decoding="async" src="images1/system.png" alt="" /></div>
+          <h2>Design Message</h2>
+          <p>We give customers advice and messages through an attractive design</p>
+          <br><br>
+          <a href="Design Massege.html">More</a>
+        </div>
+
+        <div class="box passion">
+          <div class="img-holder"><img decoding="async" src="Health/صحتك بين الحقيقة والخرافات 03.png" alt="" /></div>
+          <h2>truth and myths</h2>
+          <p>Your health between truth and myths</p>
+          <br><br>
+          <a href="health.html">More</a>
+        </div>
+
+        <div class="box passion">
+          <div class="img-holder"><img decoding="async" src="images/In.jpg" alt="" /></div>
+          <h2>LinkedIn Designs</h2>
+          <p> We allow our clients to market their business on Linkedin </p>
+          <br><br>
+          <a href="linked.html">More</a>
+        </div>
+
+        <div class="box passion">
+          <div class="img-holder"><img decoding="async" src="images/Motion.png" alt="" /></div>
+          <h2>Motion Graphic</h2>
+          <p>We provide our customers with a motion video that expresses what he wants to advertise for his company in an attractive way</p>
+          <br><br>
+          <a href="indexx.html">More</a>
+        </div>
+        
+      </div>
+    </div>
+    <!-- End Features -->
+    
+ <!-- Start Footer -->
+    <div class="footer">
+      <div class="container">
+        <div class="box">
+          <img src="images/logo.png" class="img">
+          <ul class="social">
+            <li>
+              <a href="https://www.facebook.com/profile.php?id=100089113279864&mibextid=ZbWKwL" class="facebook">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://twitter.com/anvilmed?s=09" class="twitter">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="linkedin">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </li>
+          </ul>
+          <p class="text">
+            Follow us on social Media Links
+          </p>
+        </div>
+        <div class="box">
+          <ul class="links">
+            <li><a href="#">Medical Coding</a></li>
+            <li><a href="#">Question & Answer</a></li>
+            <li><a href="#">Designs Messages</a></li>
+            <li><a href="#">Motion Graphic</a></li>
+            <li><a href="#">Pricing Plans</a></li>
+          </ul>
+        </div>
+        <div class="box">
+          <div class="line">
+            <i class="fas fa-map-marker-alt fa-fw"></i>
+            <div class="info">Egypt, AlGharbia, AlMahalla, Room Number 220</div>
+          </div>
+          <div class="line">
+            <i class="far fa-clock fa-fw"></i>
+            <div class="info">Business Hours: From 08:00 To 17:00</div>
+          </div>
+          <div class="line">
+            <i class="fas fa-phone-volume fa-fw"></i>
+            <div class="info">
+              <span>+966 56 727 0884</span>
+              <span>+966 54 068 0265</span>
+            </div>
+          </div>
+        </div>
+        <div class="box footer-gallery">
+          <img decoding="async" src="imgs/gallery-01.png" alt="" />
+          <img decoding="async" src="imgs/gallery-02.png" alt="" />
+          <img decoding="async" src="imgs/gallery-03.jpg" alt="" />
+          <img decoding="async" src="imgs/gallery-04.png" alt="" />
+          <img decoding="async" src="imgs/gallery-05.jpg" alt="" />
+          <img decoding="async" src="imgs/gallery-06.png" alt="" />
+        </div>
+      </div>
+
+      <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+      <div class="elfsight-app-2ebf9fa6-91e6-4c1a-92a6-063a51abdef5"></div>
+
+      <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+      <div class="elfsight-app-6aa6a0ad-0435-4035-bf03-eb10c43102c9"></div>
+
+    
+
+
+     <p class="copyright">&copy; 2023 <span>Bloom</span> All Right Reserved</p>
+    </div>
+    <!-- End Footer -->
+
+    <script>
+      // Back to top
+          var amountScrolled = 200;
+          var amountScrolledNav = 25;
+
+          $(window).scroll(function() {
+            if ( $(window).scrollTop() > amountScrolled ) {
+              $('button.back-to-top').addClass('show');
+            } else {
+              $('button.back-to-top').removeClass('show');
+            }
+          });
+
+          $('button.back-to-top').click(function() {
+            $('html, body').animate({
+              scrollTop: 0
+            }, 800);
+            return false;
+          });
+
+
+            var loader = document.querySelector(".loader")
+
+            window.addEventListener("load", vanish);
+
+            function vanish() {
+              loader.classList.add("disppear");
+            }
+
+        </script>
+
+  </body>

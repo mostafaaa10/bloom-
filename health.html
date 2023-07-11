@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link href="path/to/lightbox.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="images/Logo.png" type="Logo.png" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Bloom | Your Health</title>
+    <!-- Main Template CSS File -->
+    <link rel="stylesheet" href="css/leon.css" />
+    <!-- Render All Elements Normally -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <!-- Font Awesome Library -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600;700;800&#038;display=swap"
+      rel="stylesheet"/>
+    
+
+      <link rel="stylesheet" href="css/lightbox.min.css">
+      <script src="js/lightbox-plus-jquery.min.js"></script>
+
+<style>
+  .team {
+  padding-top: var(--main-padding-top);
+  padding-bottom: var(--main-padding-bottom);
+  position: relative;
+}
+.team .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+.team .box {
+  position: relative;
+}
+.team .box::before,
+.team .box::after {
+  content: "";
+  background-color: #f3f3f3;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  border-radius: 10px;
+  transition: var(--main-transition);
+}
+.team .box::before {
+  width: calc(100% - 60px);
+  z-index: -2;
+}
+.team .box::after {
+  z-index: -1;
+  background-color: #e4e4e4;
+  width: 0;
+}
+.team .box .social a{
+  text-decoration: none;
+}
+
+.team .container .box .data .info{
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.team .container .box .data .info p {
+  margin-left: -50px;
+}
+
+.team .box:hover::after {
+  width: calc(100% - 60px);
+}
+.team .box .data {
+  display: flex;
+  align-items: center;
+  padding-top: 60px;
+}
+.team .galley img {
+  width: calc(100% - 20px);
+  transition: var(--main-transition);
+  border-radius: 10px;
+}
+
+.team .box .data img {
+  width: calc(100% - 60px);
+  transition: var(--main-transition);
+  border-radius: 10px;
+}
+.team .box:hover img {
+}
+.team .box .data .social {
+  width: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.team .box .data .social a {
+  width: 60px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.team .box .data .social a:hover i {
+  color: var(--main-color);
+}
+.team .box .data .social i {
+  color: #777;
+  transition: var(--main-transition);
+  margin-right: 130px;
+}
+.team .box .info {
+  padding-left: 80px;
+}
+.team .box .info h3 {
+  margin-bottom: 0;
+  color: var(--main-color);
+  font-size: 18px;
+  transition: var(--main-transition);
+}
+.team .box .info .h3 {
+  margin-bottom: 0;
+  color: var(--main-color);
+  font-size: 18px;
+  transition: var(--main-transition);
+  margin-left: -50px;
+}
+.team .box .info p {
+  margin-top: 10px;
+  margin-bottom: 25px;
+  margin-left: -150px;
+  text-align: center;
+}
+
+.team .box:hover .info h3 {
+  color: #777;
+}
+@media(max-width:767px) {
+    .main-title {
+    text-transform: uppercase;
+    margin: 0 auto 80px;
+    border: 2px solid black;
+    padding: 10px 20px;
+    font-size: 23px;
+    width: fit-content;
+    position: relative;
+    z-index: 1;
+    transition: var(--main-transition);
+}
+  }
+
+
+/* End Team */
+
+
+
+</style>
+  </head>
+  <body>
+
+    <div class="loader">
+      <img src="load-gif.gif" alt="">
+    </div>
+ <!--Start Navbar--> 
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="images/logo.png"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Social Media Links
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-Facebook" href="https://www.facebook.com/profile.php?id=100089113279864&mibextid=ZbWKwL">Facebook</a></li>
+              <li><a class="dropdown-Twitter" href="#">Twitter</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-In" href="#">Linked In </a></li>
+            </ul>
+          </li>
+          
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+</nav>
+   <!--End Navbar--> 
+
+   <!-- Start Landing Section -->
+    <div class="landing">
+      <div class="intro-text">
+        <h2> Your health between truth and myths </h2>
+        <p>We will show you the real health habits and myths as well</p>
+      </div>
+    </div>
+    <!-- End Landing Section -->
+    <br><br><br><br>
+    
+    <!-- Start Team -->
+    <div class="team" id="team">
+      <h3 class="main-title">between truth and myths</h2>
+      <div class="container">
+        <div class="box">
+          <div class="data">
+            <div class="gallery">
+              <a href="Health/صحتك بين الحقيقة والخرافات 03.png" data-lightbox="mygallery" data-title=" Your health between truth and myths "><img src="Health/صحتك بين الحقيقة والخرافات 03.png"></a>
+            </div>
+            ظج  
+            <div class="social">
+               <a href="https://www.facebook.com/photo/?fbid=194117113568730&set=a.139135859066856">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              
+            </div>
+          </div>
+          <div class="info">
+           
+            <h3 class="h3"> Truth and myths </h3>
+            <p>Your health between truth and myths</p>
+          </div>
+        </div>
+
+        <div class="box">
+            <div class="data">
+              <div class="gallery">
+                <a href="Health/ضغوط 01.png" data-lightbox="mygallery" data-title="  الضغوط النفسية    "><img src="Health/ضغوط 01.png"></a>
+              </div>
+              <div class="social">
+                <a href="https://www.facebook.com/photo/?fbid=189788104001631&set=a.139135859066856">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#">
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+                
+              </div>
+            </div>
+            <div class="info">
+              <h3> الضغوط النفسية  </h3>
+              <p>     الضغوط النفسية مرض ولا رفاهية   </p>
+            </div>
+          </div>
+        

@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link href="path/to/lightbox.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="images/Logo.png" type="Logo.png" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Bloom | Design Message </title>
+    <!-- Main Template CSS File -->
+    <link rel="stylesheet" href="css/leon.css" />
+    <!-- Render All Elements Normally -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <!-- Font Awesome Library -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600;700;800&#038;display=swap"
+      rel="stylesheet"/>
+    <style>
+       /* Start Footer */
+.footer {
+  background-color: #191919;
+  padding: 70px 0 0;
+}
+@media (max-width: 767px) {
+  .footer {
+    text-align: center;
+  }
+}
+.footer .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 40px;
+}
+.footer .box h3 {
+  color: white;
+  font-size: 50px;
+  margin: 0 0 20px;
+}
+.footer .box .social {
+  display: flex;
+}
+@media (max-width: 767px) {
+  .footer .box .social {
+    justify-content: center;
+  }
+}
+.footer .box .social li {
+  margin-right: 10px;
+}
+.footer .box .social li a {
+  text-decoration: none;
+  background-color: #313131;
+  color: #b9b9b9;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  transition: var(--main-transition);
+}
+.footer .box .social .facebook:hover {
+  background-color: #4267B2;
+}
+.footer .box .social .twitter:hover {
+  background-color: #1da1f2;
+}
+.footer .box .social .linkedin:hover {
+  background-color: #0A66C2 ;
+}
+.footer .box .text {
+  line-height: 2;
+  color: #b9b9b9;
+}
+.footer .box .links li {
+  padding: 15px 0;
+  transition: var(--main-transition);
+}
+.footer .box .links li:not(:last-child) {
+  border-bottom: 1px solid #444;
+}
+.footer .box .links li:hover {
+  padding-left: 10px;
+}
+.footer .box .links li:hover a {
+  color: white;
+}
+.footer .box .links li a {
+  text-decoration: none;
+  color: #b9b9b9;
+  transition: var(--main-transition);
+
+}
+.footer .box .links li a::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\F101";
+  font-weight: 900;
+  margin-right: 10px;
+  color: var(--main-color);
+}
+.footer .box .line {
+  display: flex;
+  align-items: center;
+  color: #b9b9b9;
+  margin-bottom: 30px;
+}
+@media (max-width: 767px) {
+  .footer .box .line {
+    flex-direction: column;
+  }
+}
+.footer .box .line i {
+  font-size: 25px;
+  color: var(--main-color);
+  margin-right: 10px;
+}
+@media (max-width: 767px) {
+  .footer .box .line i {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+}
+.footer .box .line .info {
+  line-height: 1.7;
+  flex: 1;
+}
+.footer .box .line .info span {
+  display: block;
+}
+.footer .container .box .img {
+  width: 200px; 
+}
+.footer .footer-gallery img {
+  width: 78px;
+  border: 3px solid white;
+  margin: 2px;
+}
+.footer .copyright {
+  padding: 25px 0;
+  text-align: center;
+  color: white;
+  margin: 50px 0 0;
+  border-top: 1px solid #444;
+  font-size: 20px;
+}
+.footer .elfsight-app-6aa6a0ad-0435-4035-bf03-eb10c43102c9 {
+  margin-left: 800px;
+}
+@media(max-width: 767px) {
+  .footer .elfsight-app-6aa6a0ad-0435-4035-bf03-eb10c43102c9 {
+  margin-left: 10px;
+}
+}
+.copyright span {
+  color: #10cab7;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+/* End Footer */
+    </style>
+
+  <link rel="stylesheet" href="css/lightbox.min.css">
+  <script src="js/lightbox-plus-jquery.min.js"></script>
+
+  </head>
+  <body>
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><img src="images/logo.png"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Social Media Links
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-Facebook" href="https://www.facebook.com/profile.php?id=100089113279864&mibextid=ZbWKwL">Facebook</a></li>
+            <li><a class="dropdown-Twitter" href="#">Twitter</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-In" href="#">Linked In </a></li>
+          </ul>
+        </li>
+        
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+   
+   <!-- Start Landing Section -->
+    <div class="landing">
+      <div class="intro-text">
+        <h1> Design Message  </h1>
+        <p>We display messages and advice in the form of attractive designs</p>
+      </div>
+    </div>
+    <!-- End Landing Section -->
+    <br><br><br><br>
+
+    <!-- Start Team -->
+ 
+    
+    
+    <div class="team" id="team">
+      <h2 class="main-title">Design Messages</h2>
+      <div class="container">
+        <div class="box">
+          <div class="data">
+            <div class="gallery">
+              <a href="images1/system.png" data-lightbox="mygallery" data-title=" كفاءة شغلك مضمونة  "><img src="images1/system.png"></a>
+            </div>
+            <div class="social">
+               <a href="https://www.facebook.com/photo.php?fbid=239978621872268&set=pb.100075803953206.-2207520000.&type=3">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              
+            </div>
+          </div>
+          <div class="info">
+           
+            <h3>كفاءة شغلك مضمونة </h3>
+            <p>  عشان أصبحنا في عصر سريع ومتقدم ويحدث 
+              <br>
+              العديد من التحديات 
+              <br>
+              وبيتطلب مننا دايماً اننا نكون على علم دائم
+              <br>
+              بأي تغييرات لكل المجالات  </p>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="data">
+            <div class="gallery">
+              <a href="images1/target.png" data-lightbox="mygallery" data-title=" جربت تبيع عربيه اخر موديل "><img src="images1/target.png"></a>
+            </div>
+            <div class="social">
+              <a href="">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-linkedin-in"></i>
+              </a>    
+            </div>
+          </div>
+          <div class="info">
+            <h3 class="h3">جربت تبيع عربيه اخر موديل </h3>
+            <p>
+                  ! جربت تبيع عربية اخر موديل في المترو
+            
+            </p>
+          </div>
+        </div>
+        
+        
+
+        <div class="box">
+          <div class="data">
+            <div class="gallery">
+              <a href="images1/دخلك.jpg" data-lightbox="mygallery" data-title=" زود دخلك من البيت "><img src="images1/دخلك.jpg"></a>
+            </div>
+            <div class="social">
+              <a href="https://www.facebook.com/photo.php?fbid=216814864188644&set=pb.100075803953206.-2207520000.&type=3">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </div>
+          <div class="info">
+            <h3>زود دخلك من البيت </h3>
+            <p>  #دكتور أو صيدلي ومحتاج تزود دخلك بوظيفة
+              <br>
+              تخص مجالك ؟ </p>
+          </div>
+        </div>
+        
+        
+        
+        
+        <div class="box">
+          <div class="data">
+            <div class="gallery">
+              <a href="images1/اول تكويد.jpg" data-lightbox="mygallery" data-title=" سيستم خاص بنا لتسهيل مهامك "><img src="images1/اول تكويد.jpg"></a>
+            </div>
+            <div class="social">
+              <a href="https://www.facebook.com/photo.php?fbid=216579640878833&set=pb.100075803953206.-2207520000.&type=3">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              
+            </div>
+          </div>
+          <div class="info">
+            <h3 class="h3">سيستم خاص بنا لتسهيل مهامك </h3>
+            <p> هو أول سيستم في الشرق الأوسط 
+              <Br>
+              متخصص في خدمة التكويد الطبي</p>
+          </div>
+        </div>
+        
+        
+        
+
+        <div class="box">
+          <div class="data">
+            <div class="gallery">
+              <a href="images1/التغذية.jpg" data-lightbox="mygallery" data-title=" سوء التغذية للطفل"><img src="images1/التغذية.jpg"></a>
+            </div>
+            <div class="social">
+              <a href="https://www.facebook.com/photo.php?fbid=215796797623784&set=pb.100075803953206.-2207520000.&type=3">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              
+            </div>
+          </div>
+          <div class="info">
+            <h3>سوء التغذية للطفل</h3>
+            <p class="p"> #منظمة_الصحة_العالمية تقدر أن سوء التغذية للطفل
+              <Br>
+              تمثل ٥٤٪؜ من الوفيات </p>
+          </div>
+        </div>
+        
+        
+        
+        
+        <div class="box">
+          <div class="data">
+            <div class="gallery">
+              <a href="images1/غير حياتك.jpg" data-lightbox="mygallery" data-title=" غير حياتك "><img src="images1/غير حياتك.jpg"></a>
+            </div>
+            <div class="social">
+              <a href="https://www.facebook.com/photo.php?fbid=209255744944556&set=pb.100075803953206.-2207520000.&type=3">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#"> 
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </div>
+          <div class="info">
+            <h3> غير حياتك </h3>
+            <p>نفسك حياتك تتغير للأحسن في خطوة واحدة بس   </p>
+          </div>
+        </div>
+        
+        
+        
+
+        <div class="box">
+          <div class="data">
+            <div class="gallery">
+              <a href="images1/شفت.jpg" data-lightbox="mygallery" data-title=" شيفت كارير مجاناً "><img src="images1/شفت.jpg"></a>
+            </div>
+            <div class="social">
+              <a href="https://www.facebook.com/photo.php?fbid=205871795282951&set=pb.100075803953206.-2207520000.&type=3">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              
+            </div>
+          </div>
+          <div class="info">
+            <h3> شيفت كارير مجاناً </h3>
+            <p>أنڤيل هتأهلك إنك تعمل شيفت #كارير وتشتغل
+              <br>
+              ، كل دا #مجاناً</p>
+          </div>
+        </div>
+        
+
+        
+        
+        <div class="box">
+          <div class="data">
+            <div class="gallery">
+              <a href="images1/وظيفة.jpg" data-lightbox="mygallery" data-title=" معانا وظيفتك مضمونة "><img src="images1/وظيفة.jpg"></a>
+            </div>
+            <div class="social">
+              <a href="https://www.facebook.com/photo.php?fbid=201685419034922&set=pb.100075803953206.-2207520000.&type=3">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </div>          
+          <div class="info">
+            <h3 class="h3"> معانا وظيفتك مضمونة  </h3>
+            <p> احجز مكانك الآن في الويڤ القادمة من كورس
+              <br>
+              التكويد الطبي الأسترالي</p>
+          </div>
+        </div>
+        
+        
+        
+        
+        <div class="box">
+          <div class="data">
+            <div class="gallery">
+              <a href="images1/عمل.jpg" data-lightbox="mygallery" data-title=" بعد أن تم #تعيين ٦ من الدكاترة"><img src="images1/عمل.jpg"></a>
+            </div>
+            <div class="social">
+              <a href="https://www.facebook.com/photo.php?fbid=212305474639583&set=pb.100075803953206.-2207520000.&type=3">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-linkedin-in"></i>
+              </a> 
+            </div>
+          </div>
+          <div class="info">
+            <h3 class="h3">بعد أن تم #تعيين ٦ من الدكاترة</h3>
+            <p>
+                الوظائف المتاحة:
+                <br>
+Claim officer<br>
+Approval officer
+            </p>
+          </div>
+        </div>
+        
+        
+        
+
+        <div class="box">
+          <div class="data">
+            <div class="gallery">
+              <a href="images1/تعطية.jpg" data-lightbox="mygallery" data-title=" من هم المؤمن عليهم في #التأمين_الصحي "><img src="images1/تعطية.jpg"></a>
+            </div>
+            <div class="social">
+              <a href="https://www.facebook.com/photo.php?fbid=212243441312453&set=pb.100075803953206.-2207520000.&type=3">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-linkedin-in"></i>
+              </a>    
+            </div>
+          </div>
+          <div class="info">
+            <h3 class="h3"> من هم المؤمن عليهم في #التأمين_الصحي  </h3>
+            <p>
+                الأمراض المغطاه #تأمينًا <br>
+-سرطان الثدي <br>
+-سرطان عنق الرحم <br>
+            
+            </p>
+          </div>
+        </div>
+        
+
+        
+
+        <div class="box">
+          <div class="data">
+            <div class="gallery">
+              <a href="images1/charge capture.png" data-lightbox="mygallery" data-title=" charge capture "><img src="images1/charge capture.png"></a>
+            </div>
+            <div class="social">
+              <a href="https://www.facebook.com/photo.php?fbid=212243441312453&set=pb.100075803953206.-2207520000.&type=3">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-linkedin-in"></i>
+              </a>    
+            </div>
+          </div>
+          <div class="info">
+            <h3 class="h3"> charge capture </h3>
+            <p>
+              In the healthcare industry <br> charge capture refers to <br> the process of recording 
+            </p>
+          </div>
+        </div>
+
+
+        
+
+
+        <div class="box">
+          <div class="data">
+            <div class="gallery">
+              <a href="images1/training 2.png" data-lightbox="mygallery" data-title=" Wave تم حجز اول "><img src="images1/training 2.png"></a>
+            </div>
+            <div class="social">
+              <a href="https://www.facebook.com/photo.php?fbid=212243441312453&set=pb.100075803953206.-2207520000.&type=3">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-linkedin-in"></i>
+              </a>    
+            </div>
+          </div>
+          <div class="info">
+            <h3>  Wave تم حجز اول  </h3>
+            <p>
+             في التدريب العملي 
+             <br>
+             Wave  تم حجز اول 
+           الجديدة Wave  الحق احجز في 
+            </p>
+          </div>
+        </div>
+
+
+       
+
+         <div class="box">
+          <div class="data">
+            <div class="gallery">
+              <a href="images1/freelance 02.png" data-lightbox="mygallery" data-title=" براند ولوجو "><img src="images1/freelance 02.png"></a>
+            </div>
+            <div class="social">
+              <a href="">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-linkedin-in"></i>
+              </a>    
+            </div>
+          </div>
+          <div class="info">
+            <h3> دكتور فريلانس </h3>
+            <p>
+               !مين هو الدكتور الفريلانس ؟
+            </p>
+          </div>
+        </div>
+
+
+        <div class="box">
+          <div class="data">
+            <div class="gallery">
+              <a href="images1/1 month.png" data-lightbox="mygallery" data-title=" براند ولوجو "><img src="images1/1 month.png"></a>
+            </div>
+            <div class="social">
+              <a href="">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-linkedin-in"></i>
+              </a>    
+            </div>
+          </div>
+          <div class="info">
+            <h3> شهر لوحده كفاية </h3>
+            <p>
+
+            </p>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="data">
+            <div class="gallery">
+              <a href="images1/cpc.png" data-lightbox="mygallery" data-title="Cpc شهادة "><img src="images1/cpc.png"></a>
+            </div>
+            <div class="social">
+              <a href="https://www.facebook.com/photo.php?fbid=212243441312453&set=pb.100075803953206.-2207520000.&type=3">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-linkedin-in"></i>
+              </a>    
+            </div>
+          </div>
+          <div class="info">
+            <h3 class="h3">Cpc شهادة  </h3>
+            <p>
+             Cpc اجتازت شهادة  <br>
+             ولسه بتدور علي شغل 
+            
+            </p>
+          </div>
+        </div>
+        
+
+      </div>
+    </div>
+    
+    <div class="spikes"></div>
+        
+    <!-- End Team -->
+    
+    <!-- Start Footer -->
+    <div class="footer">
+      <div class="container">
+        <div class="box">
+          <img src="images/logo.png" class="img">
+          <ul class="social">
+            <li>
+              <a href="#" class="facebook">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="twitter">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="linkedin">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </li>
+          </ul>
+          <p class="text">
+            Follow us on social Media Links
+          </p>
+        </div>
+        <div class="box">
+          <ul class="links">
+            <li><a href="#">Medical Coding</a></li>
+            <li><a href="#">Question & Answer</a></li>
+            <li><a href="#">Designs Messages</a></li>
+            <li><a href="#">Motion Graphic</a></li>
+            <li><a href="#">Pricing Plans</a></li>
+          </ul>
+        </div>
+        <div class="box">
+          <div class="line">
+            <i class="fas fa-map-marker-alt fa-fw"></i>
+            <div class="info">Egypt, AlGharbia, AlMahalla, Room Number 220</div>
+          </div>
+          <div class="line">
+            <i class="far fa-clock fa-fw"></i>
+            <div class="info">Business Hours: From 08:00 To 17:00</div>
+          </div>
+          <div class="line">
+            <i class="fas fa-phone-volume fa-fw"></i>
+            <div class="info">
+              <span>+966 56 727 0884</span>
+              <span>+966 54 068 0265</span>
+            </div>
+          </div>
+        </div>
+        <div class="box footer-gallery">
+          <img decoding="async" src="imgs/gallery-01.png" alt="" />
+          <img decoding="async" src="imgs/gallery-02.png" alt="" />
+          <img decoding="async" src="imgs/gallery-03.jpg" alt="" />
+          <img decoding="async" src="imgs/gallery-04.png" alt="" />
+          <img decoding="async" src="imgs/gallery-05.jpg" alt="" />
+          <img decoding="async" src="imgs/gallery-06.png" alt="" />
+        </div>
+      </div>
+
+      <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+      <div class="elfsight-app-6aa6a0ad-0435-4035-bf03-eb10c43102c9"></div>
+
+      <p class="copyright">&copy; 2023 <span>Bloom</span> All Right Reserved</p>
+    </div>
+    <!-- End Footer -->
+
+
+    
+
+  </body>
